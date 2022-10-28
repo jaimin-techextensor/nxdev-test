@@ -1,0 +1,27 @@
+{
+  "sourceRoot": "apps/test-check-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/test-check-e2e/cypress.json",
+        "devServerTarget": "test-check:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "test-check:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/test-check-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["test-check"]
+}

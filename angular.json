@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "test-check": "apps/test-check",
+    "test-check-e2e": "apps/test-check-e2e"
+  }
+}
